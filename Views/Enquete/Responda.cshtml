@@ -1,0 +1,38 @@
+@model EnqueteWeb.Models.RespostaUsuario;
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete Web!</title>
+    <link rel="stylesheet" href="~/css/responda.css">
+</head>
+<body>
+    <h1>Enquete Web!</h1>
+    <h2>Você teria coragem de fazer uma viagem sem volta para Marte?</h2>
+    <h4>Preencha os campos e submeta sua resposta!</h4>
+    <hr>
+    <form method="POST">
+        <div>
+            <label asp-for="Nome">Nome: </label>
+            <input asp-for="Nome" required placeholder="Fulano">
+        </div>
+        <div>
+            <label asp-for="Email">E-Mail: </label>
+            <input asp-for="Email" type="email" required placeholder="fulano@gmail.com">
+        </div>
+            Resposta:
+            <div>
+                <input type="radio" name="Sim" id="rdSim" value="true">
+                <label for="rdSim">Sim</label>
+            </div>
+            <div>
+                <input type="radio" name="Sim" id="rdNao" value="false">
+                <label for="rdNao">Não</label>
+            </div>
+            <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
